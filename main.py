@@ -273,7 +273,10 @@ while play:
             print("\n-- Cho doi thu cua ban --") 
             
             while True:
-                if dutuoi(lordDeck): break
+                if len(playerDeck) == 2 and tinhdiem(lordDeck) <= 17 and len(lordDeck) < 5: 
+                    lordDeck.append(playDeck[-1])
+                    playDeck.pop()                    
+                elif dutuoi(lordDeck): break
                 elif len(lordDeck) < 5:
                     lordDeck.append(playDeck[-1])
                     playDeck.pop()
